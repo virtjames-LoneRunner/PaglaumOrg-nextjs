@@ -14,9 +14,6 @@ import JoinNewsletter from "../components/home/JoinNewsletter";
 import FeaturedProjects from "../components/home/FeaturedProjects";
 import { useEffect } from "react";
 
-import Aos from "aos";
-import "aos/dist/aos.css";
-
 export async function getServerSideProps() {
   const req = await fetch(`${BASE_URL}/api/home`);
   const data = await req.json();
@@ -27,9 +24,6 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ data }) {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
   return (
     <div>
       <Head>
