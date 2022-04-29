@@ -23,6 +23,8 @@ function Navbar() {
               src={"/static/img/logo.png"}
               className="0 w-14 mx-1"
               alt="Paglaum Logo"
+              width="50"
+              height="40"
             />
             <span className="hidden md:flex text-[#09213d] font-bold text-2xl">
               Paglaum

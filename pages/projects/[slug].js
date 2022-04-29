@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   let res = await fetch(`${BASE_URL}/api/projects?project_id=${params.slug}`);
   let project = await res.json();
-  console.log(project);
+
   return {
     props: { project },
   };
@@ -98,7 +98,9 @@ export default function Project({ project }) {
                       <Image
                         alt="Sponsor Logo"
                         className="p-2"
-                        src={sponsor.logo}
+                        src={sponsor.logo ? sponsor.logo : "/media/default.png"}
+                        height="350"
+                        width="500"
                       />
                     ) : null}
                     <h2 className="text-xs lg:text-base font-medium text-gray-800">

@@ -12,7 +12,9 @@ function TeamMemberCard({ officer }) {
         <Image
           alt="Team Member Picture"
           className="relative z-20 w-full rounded-full"
-          src={officer?.picture}
+          src={officer?.picture ? officer?.picture : "/media/default.png"}
+          width={200}
+          height={200}
         />
       </div>
       <div className="mt-3 space-y-2 text-center">

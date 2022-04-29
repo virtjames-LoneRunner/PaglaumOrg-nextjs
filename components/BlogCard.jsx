@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-function BlogCard({ blog }) {
+export default function BlogCard({ blog }) {
   // const [updatedAt, setUpdatedAt] = useState("");
   let date = new Date(blog.created_at);
   var options = { year: "numeric", month: "long", day: "numeric" };
@@ -14,8 +14,12 @@ function BlogCard({ blog }) {
         <div className="absolute top-0 right-0 bg-gray-50">
           <Image
             className="w-28 h-20"
-            src={blog.featured_image}
+            src={
+              blog?.featured_image ? blog?.featured_image : "/media/default.png"
+            }
             alt="Blog Featured Image"
+            width={150}
+            height={100}
           />
         </div>
         <div className="flex items-center justify-between">
@@ -24,7 +28,7 @@ function BlogCard({ blog }) {
         <div className="mt-2">
           <Link passHref href={`/blog/${blog?.slug}`}>
             <p className="cursor-pointer text-2xl font-bold text-gray-700 hover:underline w-4/6">
-              {blog.title}
+              {blog?.title}
             </p>
           </Link>
           <p className="mt-2 text-gray-600">{blog.description}</p>
@@ -39,11 +43,17 @@ function BlogCard({ blog }) {
             <Link passHref href={`/author/${blog?.author?.user?.username}`}>
               <div className="cursor-pointer flex items-center">
                 <Image
-                  src={blog?.author?.picture}
+                  src={
+                    blog?.author?.picture
+                      ? blog?.author?.picture
+                      : "/media/default.png"
+                  }
                   alt="avatar"
                   className="hidden object-cover w-10 h-10 mx-4 rounded-full sm:block bg-blue-100"
+                  height={50}
+                  width={50}
                 />
-                <h1 className="font-bold text-gray-700 hover:underline">
+                <h1 className="ml-2 font-bold text-gray-700 hover:underline">
                   {blog?.author?.user?.first_name}{" "}
                   {blog?.author?.user?.last_name}
                 </h1>
@@ -55,5 +65,3 @@ function BlogCard({ blog }) {
     </div>
   );
 }
-
-export default BlogCard;

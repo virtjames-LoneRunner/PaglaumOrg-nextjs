@@ -24,7 +24,13 @@ function Sponsors({ sponsors }) {
               className="rounded-lg py-5 flex flex-col items-center justify-center shadow-lg border border-gray-100"
             >
               {sponsor.logo ? (
-                <Image alt="Sponsor Logo" className="p-5" src={sponsor.logo} />
+                <Image
+                  alt="Sponsor Logo"
+                  className="p-5"
+                  src={sponsor.logo ? sponsor.logo : "/media/default.png"}
+                  width="250"
+                  height="150"
+                />
               ) : null}
               <h2 className="text-xs md:text-2xl font-medium text-gray-800">
                 {sponsor.name}
