@@ -10,7 +10,7 @@ import "aos/dist/aos.css";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
   axios.defaults.baseURL = BASE_URL;
   return <Component {...pageProps} />;
