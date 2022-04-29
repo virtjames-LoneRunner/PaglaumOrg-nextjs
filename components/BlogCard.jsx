@@ -11,7 +11,7 @@ export default function BlogCard({ blog }) {
   return (
     <div className="mt-6">
       <div className="relative max-w-4xl px-10 py-6 mx-auto bg-white rounded-lg shadow-md text-left overflow-hidden">
-        <div className="absolute top-0 right-0 bg-gray-50">
+        {/* <div className="absolute top-0 right-0 bg-gray-50">
           <Image
             className="w-28 h-20"
             src={
@@ -21,13 +21,13 @@ export default function BlogCard({ blog }) {
             width={150}
             height={100}
           />
-        </div>
+        </div> */}
         <div className="flex items-center justify-between">
           <span className="font-light text-gray-600">{updated_at}</span>
         </div>
         <div className="mt-2">
           <Link passHref href={`/blog/${blog?.slug}`}>
-            <p className="cursor-pointer text-2xl font-bold text-gray-700 hover:underline w-4/6">
+            <p className="cursor-pointer text-2xl font-bold text-gray-700 hover:underline">
               {blog?.title}
             </p>
           </Link>
