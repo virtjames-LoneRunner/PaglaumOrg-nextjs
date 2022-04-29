@@ -91,7 +91,7 @@ export default function Project({ project }) {
                 {project?.sponsors?.map((sponsor) => (
                   <div
                     key={sponsor.id}
-                    class="rounded-lg py-2 flex flex-col items-center justify-center shadow-lg border border-gray-100"
+                    className="rounded-lg py-2 flex flex-col items-center justify-center shadow-lg border border-gray-100"
                   >
                     {sponsor.logo ? (
                       <img className="p-2" src={sponsor.logo} />

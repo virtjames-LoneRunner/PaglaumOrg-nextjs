@@ -12,7 +12,7 @@ export default function Partnerships() {
       </Head>
       <Navbar />
       <main className="h-screen">
-        <div class="flex justify-center md:pr-5 h-full b-gray-50">
+        <div className="flex justify-center md:pr-5 h-full b-gray-50">
           Partnerships
         </div>
       </main>

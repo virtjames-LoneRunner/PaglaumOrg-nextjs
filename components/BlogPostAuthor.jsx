@@ -9,7 +9,7 @@ function BlogPostAuthor({ author }) {
         <img
           src={author?.picture}
           alt="avatar"
-          class="object-cover w-20 h-20 mx-4 rounded-full"
+          className="object-cover w-20 h-20 mx-4 rounded-full"
         />
         <div className="flex flex-col">
           <Link href={`/author/${author?.user?.username}`}>
