@@ -6,7 +6,7 @@ import Head from "next/head";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await axios.get("/api/about");
   const data = await res.data;
 

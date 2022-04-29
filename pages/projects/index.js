@@ -7,7 +7,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ProjectTimelineItem from "../../components/ProjectTimelineItem";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // const [projects, setProjects] = useState([]);
   const req = await fetch(`${BASE_URL}/api/projects`);
   const projects = await req.json();

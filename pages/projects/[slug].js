@@ -11,21 +11,21 @@ import CommentForm from "../../components/CommentForm";
 import BlogComment from "../../components/BlogComment";
 import Image from "next/image";
 
-export async function getStaticPaths() {
-  const req = await fetch(`${BASE_URL}/api/projects`);
-  const data = await req.json();
+// export async function getStaticPaths() {
+//   const req = await fetch(`${BASE_URL}/api/projects`);
+//   const data = await req.json();
 
-  const paths = data.map((project) => {
-    return { params: { slug: project.slug } };
-  });
+//   const paths = data.map((project) => {
+//     return { params: { slug: project.slug } };
+//   });
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   let res = await fetch(`${BASE_URL}/api/projects?project_id=${params.slug}`);
   let project = await res.json();
 

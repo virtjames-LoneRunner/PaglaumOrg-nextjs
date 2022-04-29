@@ -17,7 +17,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const req = await fetch(`${BASE_URL}/api/home`);
   const data = await req.json();
   // console.log(data);

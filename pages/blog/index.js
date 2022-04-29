@@ -8,7 +8,7 @@ import Footer from "../../components/Footer";
 import { BASE_URL } from "../../config/config";
 import Head from "next/head";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   // const [projects, setProjects] = useState([]);
   const req = await fetch(`${BASE_URL}/api/blog`);
   const data = await req.json();

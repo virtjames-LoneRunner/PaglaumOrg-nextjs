@@ -12,21 +12,21 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Head from "next/head";
 
-export async function getStaticPaths() {
-  const req = await fetch(`${BASE_URL}/api/blog`);
-  const data = await req.json();
+// export async function getStaticPaths() {
+//   const req = await fetch(`${BASE_URL}/api/blog`);
+//   const data = await req.json();
 
-  const paths = data?.blogs?.map((blog) => {
-    return { params: { slug: blog.slug } };
-  });
+//   const paths = data?.blogs?.map((blog) => {
+//     return { params: { slug: blog.slug } };
+//   });
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   let res = await fetch(`${BASE_URL}/api/blog?id=${params.slug}`);
   let blog = await res.json();
   return {

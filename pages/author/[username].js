@@ -8,21 +8,21 @@ import Footer from "../../components/Footer";
 import Head from "next/head";
 import Link from "next/link";
 
-export async function getStaticPaths() {
-  const req = await fetch(`${BASE_URL}/api/author`);
-  const authors = await req.json();
+// export async function getStaticPaths() {
+//   const req = await fetch(`${BASE_URL}/api/author`);
+//   const authors = await req.json();
 
-  const paths = authors?.map((author) => {
-    return { params: { username: author?.user?.username } };
-  });
+//   const paths = authors?.map((author) => {
+//     return { params: { username: author?.user?.username } };
+//   });
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   let res = await fetch(`${BASE_URL}/api/author?username=${params.username}`);
   let data = await res.json();
   console.log("AUTHOR", data);
