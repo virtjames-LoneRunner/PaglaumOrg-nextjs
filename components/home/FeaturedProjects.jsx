@@ -10,7 +10,7 @@ function FeaturedProjects({ projects }) {
     <section className="relative w-full bg-white">
       <div className="absolute w-full h-32 bg-white"></div>
       <div className="relative w-full px-5 py-10 mx-auto sm:py-12 md:py-16 md:px-10 max-w-7xl bg-white">
-        <Link href="/projects">
+        <Link passHref href="/projects">
           <h1 className="cursor-pointer  mb-1 text-4xl font-extrabold leading-none text-gray-900 lg:text-5xl xl:text-6xl sm:mb-3">
             Recent Projects
           </h1>

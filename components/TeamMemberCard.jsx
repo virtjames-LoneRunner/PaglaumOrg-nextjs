@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 function TeamMemberCard({ officer }) {
@@ -8,7 +9,8 @@ function TeamMemberCard({ officer }) {
     >
       <div className="relative p-5">
         <div className="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-[#fad1a0]"></div>
-        <img
+        <Image
+          alt="Team Member Picture"
           className="relative z-20 w-full rounded-full"
           src={officer?.picture}
         />

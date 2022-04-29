@@ -119,7 +119,7 @@ export default function AuthorPage({ author, blogs }) {
                 className="flex flex-col bg-white p-5 shadow-md space-y-2 w-auto"
                 key={blog.id}
               >
-                <Link href={`/blog/${blog?.slug}`}>
+                <Link passHref href={`/blog/${blog?.slug}`}>
                   <p className="font-bold text-gray-700 text-left hover:underline cursor-pointer">
                     {blog?.title}
                   </p>

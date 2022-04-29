@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 // import logo from "../static/img/logo.png";
 import Sidebar from "./Sidebar";
+import Image from "next/image";
 
 function Navbar() {
   const router = useRouter();
@@ -13,11 +14,12 @@ function Navbar() {
     <section className="w-full px-8 text-gray-700 bg-white shadow-lg body-font sticky top-0 z-50">
       <div className="container flex flex-wrap items-center justify-between py-5 mx-auto flex-row max-w-7xl">
         <Link
+          passHref
           href="/"
           className="relative z-10 flex items-center w-auto text-2xl font-extrabold leading-none text-gray-800 select-none space-x-2"
         >
           <div className="flex justify-center items-end">
-            <img
+            <Image
               src={"/static/img/logo.png"}
               className="0 w-14 mx-1"
               alt="Paglaum Logo"
@@ -29,7 +31,7 @@ function Navbar() {
         </Link>
 
         <nav className="top-0 left-0 z-0 hidden md:flex items-center justify-center w-full h-full py-5 -ml-0 space-x-5 text-base md:-ml-5 md:py-0 md:absolute">
-          <Link href="/">
+          <Link passHref href="/">
             <div
               className={`flex ${
                 router.pathname == "/" ? "border-b-2" : ""
@@ -44,7 +46,11 @@ function Navbar() {
               </span>
             </div>
           </Link>
-          <Link href="/projects" className="relative font-medium leading-6 ">
+          <Link
+            passHref
+            href="/projects"
+            className="relative font-medium leading-6 "
+          >
             <div
               className={`flex ${
                 router.pathname.includes("/projects") ? "border-b-2" : ""
@@ -59,7 +65,11 @@ function Navbar() {
               </span>
             </div>
           </Link>
-          <Link href="/blog" className="relative font-medium leading-6 ">
+          <Link
+            passHref
+            href="/blog"
+            className="relative font-medium leading-6 "
+          >
             <div
               className={`flex ${
                 router.pathname.includes("/blog") ? "border-b-2" : ""
@@ -74,7 +84,7 @@ function Navbar() {
               </span>
             </div>
           </Link>
-          {/* <Link href="/partnerships" className="relative font-medium leading-6">
+          {/* <Link passHref href="/partnerships" className="relative font-medium leading-6">
             <div
               className={`flex ${
                 router.pathname.includes("/partnerships") ? "border-b-2" : ""
@@ -87,7 +97,11 @@ function Navbar() {
               </span>
             </div>
           </Link> */}
-          <Link href="/about-us" className="relative font-medium leading-6">
+          <Link
+            passHref
+            href="/about-us"
+            className="relative font-medium leading-6"
+          >
             <div
               className={`flex ${
                 router.pathname.includes("/about-us") ? "border-b-2" : ""
@@ -102,7 +116,7 @@ function Navbar() {
               </span>
             </div>
           </Link>
-          <Link href="/contact-us" className="relative font-medium ">
+          <Link passHref href="/contact-us" className="relative font-medium ">
             <div
               className={`flex ${
                 router.pathname.includes("/contact-us") ? "border-b-2" : ""
@@ -120,13 +134,13 @@ function Navbar() {
         </nav>
 
         <div className="relative z-10 inline-flex items-center space-x-2 md:space-x-3 md:ml-5 lg:justify-end">
-          <Link href="/partner-with-us">
+          <Link passHref href="/partner-with-us">
             <div className="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-xs md:text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-200 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
               Partner with Us
             </div>
           </Link>
           <span className="inline-flex rounded-md shadow-sm">
-            <Link href="/donate">
+            <Link passHref href="/donate">
               <div className="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-xs md:text-base font-medium leading-6 text-white whitespace-no-wrap bg-indigo-600 border border-blue-700 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                 Donate
               </div>
@@ -165,32 +179,32 @@ function Navbar() {
           }}
         >
           <nav className="top-0 left-0 flex flex-col items-center justify-center w-full h-full space-y-10">
-            <Link href="/">
+            <Link passHref href="/">
               <span className="block relative font-medium leading-6 text-white transition duration-150 ease-out text-4xl hover:text-gray-800">
                 Home
               </span>
             </Link>
-            <Link href="/projects">
+            <Link passHref href="/projects">
               <span className="block relative font-medium leading-6 text-white transition duration-150 ease-out text-4xl hover:text-gray-800">
                 Projects
               </span>
             </Link>
-            <Link href="/blog">
+            <Link passHref href="/blog">
               <span className="block relative font-medium leading-6 text-white transition duration-150 ease-out text-4xl hover:text-gray-800">
                 Blog
               </span>
             </Link>
-            {/* <Link href="/partnerships">
+            {/* <Link passHref href="/partnerships">
               <span className="block relative font-medium leading-6 text-white transition duration-150 ease-out text-4xl hover:text-gray-800">
                 Partnerships
               </span>
             </Link> */}
-            <Link href="/about-us">
+            <Link passHref href="/about-us">
               <span className="block relative font-medium leading-6 text-white transition duration-150 ease-out text-4xl hover:text-gray-800">
                 About Us
               </span>
             </Link>
-            <Link href="/contact-us">
+            <Link passHref href="/contact-us">
               <span className="block relative font-medium leading-6 text-white transition duration-150 ease-out text-4xl hover:text-gray-800">
                 Contact Us
               </span>

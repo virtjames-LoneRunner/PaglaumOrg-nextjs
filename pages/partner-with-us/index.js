@@ -3,20 +3,20 @@ import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 
 export default function PartnerWithUs() {
-  //   const form = document.getElementById("form");
+  //   const htmlForm = document.getElementById("htmlForm");
   //   const result = document.getElementById("result");
 
-  //   form?.addEventListener("submit", function (e) {
-  //     const formData = new FormData(form);
+  //   htmlForm?.addEventListener("submit", function (e) {
+  //     const htmlFormData = new htmlFormData(htmlForm);
   //     e.preventDefault();
   //     var object = {};
-  //     formData.forEach((value, key) => {
+  //     htmlFormData.htmlForEach((value, key) => {
   //       object[key] = value;
   //     });
   //     var json = JSON.stringify(object);
   //     result.innerHTML = "Please wait...";
 
-  //     fetch("https://api.web3forms.com/submit", {
+  //     fetch("https://api.web3htmlForms.com/submit", {
   //       method: "POST",
   //       headers: {
   //         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ export default function PartnerWithUs() {
   //         result.innerHTML = "Something went wrong!";
   //       })
   //       .then(function () {
-  //         form.reset();
+  //         htmlForm.reset();
   //         setTimeout(() => {
   //           result.style.display = "none";
   //         }, 5000);
@@ -73,14 +73,14 @@ export default function PartnerWithUs() {
                   Partner With Us!
                 </h1>
                 <p className="text-gray-800 ">
-                  Fill up the form below to send us a message.
+                  Fill up the htmlForm below to send us a message.
                 </p>
               </div>
               <div className="m-7">
-                <form
-                  action="https://api.web3forms.com/submit"
+                <htmlForm
+                  action="https://api.web3htmlForms.com/submit"
                   method="POST"
-                  id="form"
+                  id="htmlForm"
                 >
                   <input
                     type="hidden"
@@ -92,7 +92,7 @@ export default function PartnerWithUs() {
 
                   <div className="mb-6">
                     <label
-                      for="name"
+                      htmlFor="name"
                       className="block mb-2 text-sm text-gray-800 text-left"
                     >
                       Full Name
@@ -108,7 +108,7 @@ export default function PartnerWithUs() {
                   </div>
                   <div className="mb-6">
                     <label
-                      for="email"
+                      htmlFor="email"
                       className="block mb-2 text-sm text-gray-800  text-left"
                     >
                       Email Address
@@ -124,7 +124,7 @@ export default function PartnerWithUs() {
                   </div>
                   <div className="mb-6 text-left">
                     <label
-                      for="phone"
+                      htmlFor="phone"
                       className="text-sm text-gray-800 text-left"
                     >
                       Phone Number
@@ -140,7 +140,7 @@ export default function PartnerWithUs() {
                   </div>
                   <div className="mb-6">
                     <label
-                      for="message"
+                      htmlFor="message"
                       className="block mb-2 text-sm text-gray-800  text-left"
                     >
                       Your Message
@@ -167,7 +167,7 @@ export default function PartnerWithUs() {
                     className="text-base text-center text-gray-400"
                     id="result"
                   ></p>
-                </form>
+                </htmlForm>
               </div>
             </div>
           </div>

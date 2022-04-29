@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -22,14 +23,16 @@ function Sponsors({ sponsors }) {
               data-aos="fade-up"
               className="rounded-lg py-5 flex flex-col items-center justify-center shadow-lg border border-gray-100"
             >
-              {sponsor.logo ? <img className="p-5" src={sponsor.logo} /> : null}
+              {sponsor.logo ? (
+                <Image alt="Sponsor Logo" className="p-5" src={sponsor.logo} />
+              ) : null}
               <h2 className="text-xs md:text-2xl font-medium text-gray-800">
                 {sponsor.name}
               </h2>
             </div>
           ))}
         </div>
-        <Link href="/projects">
+        <Link passHref href="/projects">
           <p className="cursor-pointer px-8 py-4 sm:w-auto w-full text-center text-base font-medium inline-block rounded text-white hover:bg-indigo-600 bg-indigo-500">
             Sponsor a Project
           </p>

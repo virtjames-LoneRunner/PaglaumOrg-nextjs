@@ -12,17 +12,17 @@ function JoinNewsletter() {
           Donate to the project, or join the effort!
         </p>
         <div className="flex justify-center mt-8 space-x-3">
-          <Link href="/donate">
+          <Link passHref href="/donate">
             <div className="cursor-pointer inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow hover:bg-indigo-700">
               Send a Donation
             </div>
           </Link>
-          <Link href="/partner-with-us">
+          <Link passHref href="/partner-with-us">
             <div className="cursor-pointer inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-blue-600 border border-transparent rounded-md hover:bg-blue-700">
               Become a Partner
             </div>
           </Link>
-          <Link href="/projects">
+          <Link passHref href="/projects">
             <div className="cursor-pointer inline-flex items-center justify-center px-5 py-3 text-base font-medium text-blue-700 bg-blue-100 border border-transparent rounded-md shadow hover:bg-blue-200">
               Volunteer
             </div>

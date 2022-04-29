@@ -26,7 +26,7 @@ function Team({ officers }) {
           ))}
         </div>
         {/* <div className="w-full flex justify-center mt-8">
-          <Link href="#_">
+          <Link passHref href="#_">
             <div className="cursor-pointer px-8 py-4 sm:w-auto w-full text-center text-base font-medium inline-block rounded text-white hover:bg-indigo-600 bg-indigo-500">
               View All Members
             </div>

@@ -9,6 +9,7 @@ import Head from "next/head";
 import DOMPurify from "dompurify";
 import CommentForm from "../../components/CommentForm";
 import BlogComment from "../../components/BlogComment";
+import Image from "next/image";
 
 export async function getStaticPaths() {
   const req = await fetch(`${BASE_URL}/api/projects`);
@@ -94,7 +95,11 @@ export default function Project({ project }) {
                     className="rounded-lg py-2 flex flex-col items-center justify-center shadow-lg border border-gray-100"
                   >
                     {sponsor.logo ? (
-                      <img className="p-2" src={sponsor.logo} />
+                      <Image
+                        alt="Sponsor Logo"
+                        className="p-2"
+                        src={sponsor.logo}
+                      />
                     ) : null}
                     <h2 className="text-xs lg:text-base font-medium text-gray-800">
                       {sponsor.name}

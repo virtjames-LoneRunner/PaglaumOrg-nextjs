@@ -7,42 +7,42 @@ function Footer() {
       <div className="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav className="flex flex-wrap justify-center -mx-5 -my-2">
           <div className="px-5 py-2">
-            <Link href="/">
+            <Link passHref href="/">
               <p className="cursor-pointer text-base leading-6 text-gray-100 hover:text-gray-200">
                 Home
               </p>
             </Link>
           </div>
           <div className="px-5 py-2">
-            <Link href="/projects">
+            <Link passHref href="/projects">
               <p className="cursor-pointer text-base leading-6 text-gray-100 hover:text-gray-200">
                 Projects
               </p>
             </Link>
           </div>
           <div className="px-5 py-2">
-            <Link href="/blog">
+            <Link passHref href="/blog">
               <p className="cursor-pointer text-base leading-6 text-gray-100 hover:text-gray-200">
                 Blog
               </p>
             </Link>
           </div>
           {/* <div className="px-5 py-2">
-            <Link href="/partnerships">
+            <Link passHref href="/partnerships">
               <p className="cursor-pointer text-base leading-6 text-gray-100 hover:text-gray-200">
                 Partnerships
               </p>
             </Link>
           </div> */}
           <div className="px-5 py-2">
-            <Link href="/about-us">
+            <Link passHref href="/about-us">
               <p className="cursor-pointer text-base leading-6 text-gray-100 hover:text-gray-200">
                 About Us
               </p>
             </Link>
           </div>
           <div className="px-5 py-2">
-            <Link href="/contact-us">
+            <Link passHref href="/contact-us">
               <p className="cursor-pointer text-base leading-6 text-gray-100 hover:text-gray-200">
                 Contact Us
               </p>
