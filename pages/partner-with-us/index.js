@@ -58,7 +58,7 @@ export default function PartnerWithUs() {
       <main>
         <Navbar />
         <div
-          className="flex justify-center md:pr-5"
+          className="flex justify-center md:pr-5 bg-gray-50"
           style={{
             backgroundImage: `url("/static/img/content/partner.JPG")`,
             backgroundPosition: `center`,

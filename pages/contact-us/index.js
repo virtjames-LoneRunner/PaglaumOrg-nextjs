@@ -58,7 +58,7 @@ export default function ContactUs() {
       <main>
         <Navbar />
         <div
-          className="flex justify-center md:pr-5"
+          className="flex justify-center md:pr-5 bg-gray-50"
           style={{
             backgroundImage: `url("/static/img/contact_us.JPG")`,
             backgroundPosition: `top`,
