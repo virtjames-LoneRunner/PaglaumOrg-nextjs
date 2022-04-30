@@ -18,9 +18,9 @@ function Team({ officers }) {
           OUR TEAM
         </p> */}
         <h2 className="relative max-w-lg mt-5 mb-10 text-4xl font-semibold leading-tight lg:text-5xl">
-          Meet the Excecutive Officers
+          Meet the Founding Members
         </h2>
-        <div className="grid w-full grid-cols-2 gap-10 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="grid w-full grid-cols-2 gap-4 md:gap-10 sm:grid-cols-3 lg:grid-cols-4">
           {officers?.map((officer) => (
             <TeamMemberCard key={officer.id} officer={officer} />
           ))}

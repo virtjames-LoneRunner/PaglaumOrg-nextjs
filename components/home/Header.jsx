@@ -5,7 +5,7 @@ import header_img from "../../public/static/img/content/header_img.JPG";
 function Header() {
   return (
     <section
-      className="px-2 py-32 bg-blue-400 md:px-0 bg-right md:bg-right-top bg-cover bg-fixed"
+      className="px-2 py-32 bg-gradient-to-r from-indigo-500 to-sky-300 md:px-0 bg-right md:bg-right-top bg-cover bg-fixed"
       style={{
         backgroundImage: `url("/static/img/content/header_img.JPG")`,
         backgroundRepeat: `no-repeat`,
@@ -14,10 +14,7 @@ function Header() {
       <div className="items-center mx-auto">
         <div className="flex items-center justify-end">
           <div className="w-full lg:w-1/3 md:px-5 ">
-            <div
-              data-aos="fade-right"
-              className="w-full space-y-6 md:space-y-4 bg-white opacity-95 p-10 rounded-md shadow-lg text-center"
-            >
+            <div className="header-div w-full space-y-6 md:space-y-4 bg-white opacity-95 p-10 rounded-md shadow-lg text-center">
               <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 md:text-4xl xl:text-6xl">
                 <span className="block xl:inline">Welcome to </span>
                 <span className="block text-indigo-600 xl:inline">

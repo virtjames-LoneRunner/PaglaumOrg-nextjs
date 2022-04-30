@@ -5,9 +5,10 @@ import React from "react";
 function DonateCTA() {
   return (
     <section
-      className="w-full px-8 py-16 xl:px-8 bg-blend-multiply"
+      className="w-full px-8 py-16 xl:px-8 bg-blend-multiply bg-gradient-to-tr from-indigo-500 to-sky-300"
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(99, 102, 241, 0.6) 0%, rgba(14, 165, 233, 0.6) 100%), url("/static/img/content/contact_CTA.JPG")`,
+        // backgroundImage: `linear-gradient(to right, rgba(99, 102, 241, 0.6) 0%, rgba(14, 165, 233, 0.6) 100%)`,
+        //  url("/static/img/content/contact_CTA.JPG")`
         backgroundPosition: `top`,
         backgroundRepeat: `no-repeat`,
         backgroundSize: `cover`,
@@ -29,10 +30,7 @@ function DonateCTA() {
           </div>
 
           <div className="w-full mt-16 md:mt-0 md:w-2/5">
-            <div
-              data-aos="fade-right"
-              className="relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7"
-            >
+            <div className="home-contact-form relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow-2xl px-7">
               <h3 className="mb-6 text-2xl font-medium text-center">
                 Contact Us!
               </h3>

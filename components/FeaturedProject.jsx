@@ -14,10 +14,7 @@ function FeaturedProject({ project }) {
   };
   let category = category_return();
   return (
-    <div
-      data-aos="fade-up"
-      className="relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group sm:col-span-12 xl:col-span-4 sm:flex-row xl:flex-col"
-    >
+    <div className="featured-project relative flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group sm:col-span-12 xl:col-span-4 sm:flex-row xl:flex-col">
       <Link passHref href={`/projects/${project?.slug}`}>
         <p
           className="cursor-pointer block w-full transition duration-300 ease-in-out transform bg-center bg-cover h-80 hover:scale-110"

@@ -37,7 +37,7 @@ function Navbar() {
             <div
               className={`flex ${
                 router.pathname == "/" ? "border-b-2" : ""
-              } border-indigo-800 transition duration-300 ease-out cursor-pointer font-medium`}
+              } border-indigo-800 transition duration-500 ease-out cursor-pointer font-medium`}
             >
               <span
                 className={`block hover:text-gray-900 text-gray-600 ${
@@ -56,7 +56,7 @@ function Navbar() {
             <div
               className={`flex ${
                 router.pathname.includes("/projects") ? "border-b-2" : ""
-              } border-indigo-800 transition duration-300 ease-out cursor-pointer font-medium`}
+              } border-indigo-800 transition duration-500 ease-out cursor-pointer font-medium`}
             >
               <span
                 className={`block hover:text-gray-900 text-gray-600 ${
@@ -75,7 +75,7 @@ function Navbar() {
             <div
               className={`flex ${
                 router.pathname.includes("/blog") ? "border-b-2" : ""
-              } border-indigo-800 transition duration-300 ease-out cursor-pointer font-medium`}
+              } border-indigo-800 transition duration-500 ease-out cursor-pointer font-medium`}
             >
               <span
                 className={`block hover:text-gray-900 text-gray-600 ${
@@ -90,7 +90,7 @@ function Navbar() {
             <div
               className={`flex ${
                 router.pathname.includes("/partnerships") ? "border-b-2" : ""
-              } border-indigo-800 transition duration-300 ease-out cursor-pointer font-medium`}
+              } border-indigo-800 transition duration-500 ease-out cursor-pointer font-medium`}
             >
               <span className={`block hover:text-gray-900 text-gray-600 ${
                   router.pathname == "/" ? "" : "hover:-translate-y-1"
@@ -107,7 +107,7 @@ function Navbar() {
             <div
               className={`flex ${
                 router.pathname.includes("/about-us") ? "border-b-2" : ""
-              } border-indigo-800 transition duration-300 ease-out cursor-pointer font-medium`}
+              } border-indigo-800 transition duration-500 ease-out cursor-pointer font-medium`}
             >
               <span
                 className={`block hover:text-gray-900 text-gray-600 ${
@@ -122,7 +122,7 @@ function Navbar() {
             <div
               className={`flex ${
                 router.pathname.includes("/contact-us") ? "border-b-2" : ""
-              } border-indigo-800 transition duration-300 ease-out cursor-pointer font-medium `}
+              } border-indigo-800 transition duration-500 ease-out cursor-pointer font-medium `}
             >
               <span
                 className={`block hover:text-gray-900 text-gray-600 ${
@@ -173,7 +173,7 @@ function Navbar() {
       </div>
       <div className="w-full">
         <div
-          className={`top-0 right-0 w-full bg-blue-600 py-20 px-10 text-white fixed h-full z-40 ease-in-out duration-300 ${
+          className={`top-0 right-0 w-full bg-blue-600 py-20 px-10 text-white fixed h-full z-40 ease-in-out duration-500 ${
             showSidebar ? "translate-x-0 " : "translate-x-full"
           }`}
           onClick={() => {

@@ -13,8 +13,8 @@ function ProjectTimelineItem({ project, side }) {
         <h1 className="mx-auto font-semibold text-lg text-white"></h1>
       </div>
       <div
-        data-aos={`fade-${side}`}
-        className="overflow-hidden order-1 rounded-lg shadow-xl w-5/12 px-0 pb-4"
+        className={`project overflow-hidden order-1 rounded-lg shadow-xl w-5/12 px-0 pb-4`}
+        data-direction={side}
       >
         <Link passHref href={`/projects/${project?.slug}`}>
           <div

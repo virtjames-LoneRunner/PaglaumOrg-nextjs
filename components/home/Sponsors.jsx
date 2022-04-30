@@ -20,8 +20,7 @@ function Sponsors({ sponsors }) {
           {sponsors?.map((sponsor) => (
             <div
               key={sponsor.id}
-              data-aos="fade-up"
-              className="rounded-lg py-5 flex flex-col items-center justify-center shadow-lg border border-gray-100"
+              className="sponsor rounded-lg py-5 flex flex-col items-center justify-center shadow-lg border border-gray-100"
             >
               {sponsor.logo ? (
                 <Image

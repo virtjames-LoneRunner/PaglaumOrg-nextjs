@@ -34,7 +34,7 @@ export default function Blog({ data }) {
     // getBlogs();
   }, []);
   return (
-    <div>
+    <div className="h-screen">
       <Head>
         <title>Paglaum Blogs</title>
         <meta
@@ -44,7 +44,7 @@ export default function Blog({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <main>
+      <main className="h-full">
         <div className="flex justify-center py-10 px-8 md:px-[15%] bg-gray-50 h-full">
           <div className="flex w-full space-x-5">
             <div className="flex flex-col w-full md:w-2/3 items-start p-2">

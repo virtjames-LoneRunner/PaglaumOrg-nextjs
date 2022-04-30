@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Head from "next/head";
 
 import { BASE_URL } from "../../config/config";
@@ -6,6 +6,11 @@ import { BASE_URL } from "../../config/config";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import ProjectTimelineItem from "../../components/ProjectTimelineItem";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export async function getServerSideProps() {
   // const [projects, setProjects] = useState([]);
@@ -18,9 +23,27 @@ export async function getServerSideProps() {
 }
 
 export default function Projects({ projects }) {
+  const el = useRef();
+  const q = gsap.utils.selector(el);
+
   useEffect(() => {
-    //   getProjects();
-    // console.log(projects);
+    document.querySelectorAll(".project").forEach((item) => {
+      gsap.fromTo(
+        item,
+        { x: item.dataset.direction === "left" ? "-20%" : "20%", opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            end: "center",
+            scrub: true,
+          },
+          duration: 3,
+          opacity: 1.2,
+          x: item.dataset.direction === "left" ? " 0" : "0",
+        }
+      );
+    });
   }, []);
 
   return (
@@ -33,7 +56,7 @@ export default function Projects({ projects }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-gray-50">
+      <main className="bg-gray-50" ref={el}>
         <Navbar />
         <div className="py-5 container mx-auto">
           <div className="relative wrap overflow-hidden pb-10 px-10 sm:px-0 md:px-10 lg:px-32 h-full">

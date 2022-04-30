@@ -3,10 +3,7 @@ import React from "react";
 
 function TeamMemberCard({ officer }) {
   return (
-    <div
-      data-aos="fade-up"
-      className="flex flex-col items-center justify-center col-span-1"
-    >
+    <div className="team-member flex flex-col items-center justify-center col-span-1">
       <div className="relative p-5">
         <div className="absolute z-10 w-full h-full -mt-5 -ml-5 rounded-full rounded-tr-none bg-[#fad1a0]"></div>
         <Image
@@ -18,9 +15,11 @@ function TeamMemberCard({ officer }) {
         />
       </div>
       <div className="mt-3 space-y-2 text-center">
-        <div className="space-y-1 text-lg font-medium leading-6">
+        <div className="space-y-1 md:text-lg font-medium leading-6">
           <h3>{officer?.full_name}</h3>
-          <p className="text-blue-600">{officer?.position}</p>
+          <p className="text-blue-600 text-sm md:text-base">
+            {officer?.position}
+          </p>
         </div>
         <div className="relative flex items-center justify-center space-x-3">
           <a
